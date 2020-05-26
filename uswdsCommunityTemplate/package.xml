@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>uswds</fullName>
+    <description>all uswds components</description>
+    <types>
+        <members>defaultTokens</members>
+        <members>fontAwesomeIcon</members>
+        <members>uswdsBase</members>
+        <members>uswdsExtendedHeader</members>
+        <members>uswdsFooterBig</members>
+        <members>uswdsFooterNavMenu</members>
+        <members>uswdsFooterNavMenuSmall</members>
+        <members>uswdsMegaMenu</members>
+        <members>uswdsNavSecondaryLinks</members>
+        <members>uswdsProfileMenu</members>
+        <members>uswdsSearch</members>
+        <members>uswdsSocialMediaNavMenu</members>
+        <members>uswdsUSABanner</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>uswds_v_2_7</members>
+        <members>uswdsUSWebsiteBanner</members>
+        <name>StaticResource</name>
+    </types>
+    <version>37.0</version>
+</Package>

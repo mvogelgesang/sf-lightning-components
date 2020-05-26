@@ -1,0 +1,5 @@
+<design:component label="uswds Extended Header">
+    <design:attribute name="siteName" label="Site Name" default="example.gov"/>
+    <design:attribute name="primaryNavigationLinkSetId" label="Primary Navigation ID/Name" default="Default_Navigation"/>
+    <design:attribute name="secondaryNavigationLinkSetId" label="Secondary Navigation ID/Name" default="Default_Navigation" />
+</design:component>

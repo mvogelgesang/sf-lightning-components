@@ -1,0 +1,30 @@
+<aura:component  access="global" description="uswds Empty Theme Layout">
+    <ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
+    <ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    
+    <aura:attribute name="usaBanner" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="header" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
+
+    <a class="usa-skipnav" href="#mainContent">Skip to Main Content</a>
+    <div class="slds-grid slds-grid_align-center">
+        <div class="slds-col slds-size_1-of-1" >
+            {!v.usaBanner}            
+        </div>
+    </div>
+    <div class="slds-grid slds-grid_align-center">
+        <div class="slds-col slds-size_1-of-1">
+            {!v.header}
+        </div>
+    </div>
+    <div class="slds-grid slds-grid_align-center">
+        <div id="mainContent" class="mainContentArea">
+            {!v.body}
+        </div>
+    </div>
+    <div class="slds-grid slds-grid_align-center">
+        <div class="slds-col slds-size_1-of-1">
+            {!v.footer}
+        </div> 
+    </div>
+</aura:component>

@@ -1,0 +1,20 @@
+<aura:component implements="forceCommunity:profileMenuInterface" access="global">
+    <ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
+    <ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    
+    <aura:attribute name="loggedIn" type="Boolean" default="false" />
+    <aura:attribute name="options" type="String[]" default="My Account, User Settings, User Profile, Log Out"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:if isTrue="{!v.loggedIn}">
+        <lightning:buttonMenu iconName="action:user" label="My Account" onselect="{! c.handleMenuSelect }" >
+            <aura:iteration items="{!v.options}" var="itemLabel">
+                <lightning:menuItem label="{!itemLabel}" value="{!itemLabel}"/>
+            </aura:iteration>
+        </lightning:buttonMenu>
+        <aura:set attribute="else">
+            <a href="login">Login</a>
+        </aura:set>
+    </aura:if>
+</aura:component>

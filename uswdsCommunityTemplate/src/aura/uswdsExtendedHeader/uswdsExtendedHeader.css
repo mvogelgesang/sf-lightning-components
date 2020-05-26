@@ -1,0 +1,12 @@
+.THIS .logoContainer {
+    border-radius:0rem;
+}
+@media (min-width: 64em) {
+    .THIS .logoContainer {
+    	width: 5rem;
+    	height: 5rem;
+	}
+}
+.THIS .logoContainer img {
+    content: t('url(' + brandLogoImage  + ')');
+}

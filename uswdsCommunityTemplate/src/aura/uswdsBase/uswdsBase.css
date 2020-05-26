@@ -1,0 +1,18 @@
+.THIS .site-logo {
+    margin-left: 1rem;
+}
+
+.THIS .site-logo .usa-logo__text::before {
+    height: 1.5rem;
+    width: 1.5rem;
+    content: "";
+    background-image: t('url(' + brandLogoImage + ')');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: inline-block;
+    margin-left: -2px;
+    margin-right: .25rem;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}

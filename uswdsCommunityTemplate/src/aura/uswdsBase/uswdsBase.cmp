@@ -1,0 +1,44 @@
+<aura:component  access="global" description="A USWDS Base Theme Layout utilizing uswdsExtendedHeader">
+    <ltng:require styles="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/css/uswds.min.css'}" />
+	<ltng:require scripts="{!$Resource.uswds_v_2_7+'/uswds-2.7.0/js/uswds.min.js'}" />
+    
+    <aura:attribute name="header" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="footer" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="majorOfficeName" type="String" default=""/>
+    <aura:attribute name="programOfficeName" type="String" default=""/>
+    <aura:attribute name="siteName" type="String" default=""/>
+    <aura:attribute name="primaryNavigationLinkSetId" type="String" default=""/>
+    <aura:attribute name="secondaryNavigationLinkSetId" type="String" default="" />
+	<!--Footer Attributes-->
+    <aura:attribute name="footerMenuNavigationLinkSetId" type="String" default="" />
+    <aura:attribute name="boilerplateLinkNavigationLinkSetId" type="String" default="" />
+    <aura:attribute name="socialMediaNavigationLinkSetId" type="String" default="" />
+    <aura:attribute name="agencyName" type="String" default="" />
+    <aura:attribute name="agencyURL" type="String" default="" />
+    <aura:attribute name="contactCenterName" type="String" default="" />
+    <aura:attribute name="contactEmail" type="String" default="" />
+    <aura:attribute name="contactPhone" type="String" default="" />
+    
+	<a class="usa-skipnav" href="#mainContent">Skip to Main Content</a>
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-1">
+        	<c:uswdsUSABanner siteName="{!v.siteName}" />
+            <!-- header -->
+            <c:uswdsExtendedHeader siteName="{!v.siteName}" primaryNavigationLinkSetId="{!v.primaryNavigationLinkSetId}" secondaryNavigationLinkSetId="{!v.secondaryNavigationLinkSetId}" />
+            {!v.header}
+        </div>
+    </div>
+    <div id="mainContent" class="mainContentArea">
+        {!v.body}
+    </div>
+    <div>
+    	<c:uswdsFooterBig footerMenuNavigationLinkSetId="{!v.footerMenuNavigationLinkSetId}" 
+                          boilerplateLinkNavigationLinkSetId="{!v.boilerplateLinkNavigationLinkSetId}" 
+                          socialMediaNavigationLinkSetId="{!v.socialMediaNavigationLinkSetId}"
+                          agencyName="{!v.agencyName}"
+                          agencyURL="{!v.agencyURL}"
+                          contactCenterName="{!v.contactCenterName}"
+                          contactEmail="{!v.contactEmail}"
+                          contactPhone="{!v.contactPhone}"/>
+    </div>
+</aura:component>
